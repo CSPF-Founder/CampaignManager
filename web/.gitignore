@@ -1,0 +1,6 @@
+# ignore idea folder
+/.idea/workspace.xml
+/.idea/libraries
+/.idea/
+/.vscode/
+/.history/
