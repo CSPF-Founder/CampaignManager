@@ -1,5 +1,4 @@
-# cm
-Campaign Manager
+# Campaign Manager (CM)
 
 Campaign Manager (CM) provides Single dash-board for Political leadership-in the run-up to the elections. 
 
@@ -116,4 +115,5 @@ Log in into the "http(s)://[SERVER_ADDRESS]/" with the newely created admin cred
 		Step 3:
 			Click “Add” button
 
- 
+ #### Mobile Client Repository:
+ https://github.com/CSPF-Founder/CampaignManagerMobile
