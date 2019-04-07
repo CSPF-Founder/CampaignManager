@@ -5,7 +5,7 @@ Campaign Manager (CM) provides Single dash-board for Political leadership-in the
 
 * You can use this open source application and set it up in your own server(setup instructions are below).
 * AVS Labs Pte Ltd(http://avslabs.co/) also offers the Campaign Manager SAAS in a nominal price.
-* You can also contact AVS Labs, if you need customized version ( it can be done in a nominal price).
+* Customization: You can also contact AVS Labs, if you need customized version ( it can be done in a nominal price).
 
 ## Setup
 
