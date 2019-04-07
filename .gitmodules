@@ -1,0 +1,3 @@
+[submodule "CampaignManagerMobile"]
+	path = CampaignManagerMobile
+	url = https://github.com/CSPF-Founder/CampaignManagerMobile.git
