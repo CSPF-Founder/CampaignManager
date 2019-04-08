@@ -6,6 +6,13 @@ Campaign Manager (CM) provides Single dash-board for Political leadership-in the
 * AVS Labs Pte Ltd(http://avslabs.co/) also offers the Campaign Manager SAAS in a nominal price.
 * Customization: You can also contact AVS Labs, if you need customized version ( it can be done in a nominal price).
 
+#### Key Benefits for political party leadership –
+* Delegates different tasks to party hierarchy with delivery deadlines
+* Tracks progress and provides auto alerts to leader on tasks’ status
+* Prioritizes Constituency Tasks in a criticality matrix, for better focus
+* Provides Simple Dashboard to manage election campaign, by any parameter – Issue/Delegate/Constituency/Criticality 
+	
+	
 ## Setup
 
 ### Setup Requirements
