@@ -52,35 +52,37 @@ class SetupController extends Controller{
             View::render("Setup/index.php");
         }
         else if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            Setup::install();
-
+            
             $requiredParams = array("name", "username", "password");
-            if (Validator::checkAllParamsExists($requiredParams, "POST")) {
-
+            if (!Validator::checkAllParamsExists($requiredParams, "POST")) {
+                $this->displayErrorFormNonFilteredAction("Please fill all the inputs");
+            }
+            else{
                 $user = User::getInstance()
-                    ->setName($_POST['name'])
-                    ->setUsername($_POST['username'])
-                    ->setPassword($_POST['password']);
-
-                if(!$user->getErrors() && $user->save()){
-                    $role = Role::findByKeyword("super_admin");
-                    if($role && $user->assignRole($role)){
-                        View::render("Setup/success.php");
-                    }
-                    else{
-                        View::securePrint("Unable to assign role to the user");
-                    }
-                }
-                else if ($user->getErrors()){
+                ->setName($_POST['name'])
+                ->setUsername($_POST['username'])
+                ->setPassword($_POST['password']);
+                if($user->getErrors()){
                     $this->displayErrorFormNonFilteredAction($user->getErrors());
                 }
                 else{
-                    $this->displayErrorFormNonFilteredAction("Unable to add the user");
+                    Setup::install();
+                    if( $user->save()){
+                        $role = Role::findByKeyword("super_admin");
+                        if($role && $user->assignRole($role)){
+                            View::render("Setup/success.php");
+                        }
+                        else{
+                            View::securePrint("Unable to assign role to the user");
+                        }
+                    }
+                    else{
+                        $this->displayErrorFormNonFilteredAction("Unable to add the user");
+                    }
                 }
+                
             }
-            else {
-                $this->displayErrorFormNonFilteredAction("Please fill all the inputs");
-            }
+            
         }
     }
 
@@ -89,7 +91,7 @@ class SetupController extends Controller{
      * @param $error_message
      * @throws \Exception
      */
-    public function displayErrorFormNonFilteredAction($error_message){
-        View::render("Setup/index.php", ['error_message' => $error_message]);
+    public function displayErrorFormNonFilteredAction($error_messages){
+        View::render("Setup/index.php", ['error_messages' => $error_messages]);
     }
 }
