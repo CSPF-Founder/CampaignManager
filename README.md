@@ -23,7 +23,8 @@ Campaign Manager (CM) provides Single dash-board for Political leadership-in the
 
 #### Step 1:
 Download the web source code and place in a directory, for example: /opt/cm/web/
-Edit the web/App/Config.php file and modify the Database configuration details.
+Edit the web/App/Config.php file and modify the Database configuration details
+(create the database called "cm" first : mysql> create database cm;).
 
 #### Step 2:
 Configure the apache with following or similar configuration so that it will mark "/opt/cm/web/public" as root of the publicly exposed directory(don't expose the root directory to public).
