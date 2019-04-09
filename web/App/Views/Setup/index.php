@@ -15,7 +15,7 @@ use Core\View;
     <div class="form">
         <h3>Setup</h3>
         <form method="POST" action="/setup/index" id="box_form" autocomplete="off">
-            <input type="text" placeholder="Super Admin Username" value="Super Admin" name="name" autocomplete="off" required/>
+            <input type="text" placeholder="Name" value="Super Admin Name" name="name" autocomplete="off" required/>
             <input type="text" placeholder="Super Admin Username" value="SuperAdmin" name="username" autocomplete="off" required/>
             <input type="password" placeholder="Super Admin Password" value="" name="password" required />
             <button type="submit" name="setup" value="Setup">Setup</button>
@@ -25,9 +25,17 @@ use Core\View;
         (just database not tables)
         <br/><br/>
         <?php
-        if(isset($error_message)){
+        if(isset($error_messages)){
             echo "<div class='error_box'>";
-            View::securePrint($error_message);
+            if(is_array($error_messages)){
+                foreach($error_messages as $error_message){
+                    View::securePrint($error_message);
+                    echo "<br/>";
+                }
+            }
+            else{
+                View::securePrint($error_messages);
+            }
             echo "</div>";
         }?>
 
