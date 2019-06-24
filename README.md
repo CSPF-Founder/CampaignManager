@@ -6,11 +6,11 @@ Campaign Manager (CM) provides Single dash-board for Political leadership-in the
 * AVS Labs Pte Ltd(http://avslabs.co/) also offers the Campaign Manager SAAS in a nominal price.
 * Customization: You can also contact AVS Labs, if you need customized version ( it can be done in a nominal price).
 
-#### Key Benefits for political party leadership –
+#### Key benefits for political party leadership –
 * Delegates different tasks to party hierarchy with delivery deadlines
 * Tracks progress and provides auto alerts to leader on tasks’ status
-* Prioritizes Constituency Tasks in a criticality matrix, for better focus
-* Provides Simple Dashboard to manage election campaign, by any parameter – Issue/Delegate/Constituency/Criticality 
+* Prioritizes constituency tasks in a criticality matrix, for better focus
+* Provides simple dashboard to manage election campaign, by any parameter – Issue/Delegate/Constituency/Criticality 
 	
 	
 ## Setup
@@ -41,8 +41,8 @@ Configure the apache with following or similar configuration so that it will mar
 Create a folder called "data" above the web folder(exmaple: /opt/cm/data/" and ensure the apache server has full permission over this directory (ensure this directory is NOT publicly accessible). 
 
 #### Step 4:
-Edit the "web/App/Config.php" file and set the debug mode to true
-Once everything is ready, go to "http(s)://[SERVER_ADDRESS]/setup/"
+Edit the "web/App/Config.php" file and set the debug mode to true.
+Once everything is ready, go to "http(s)://[SERVER_ADDRESS]/setup/".
 Enter the Super Admin username and password then click Setup.
 
 #### Step 5:
@@ -97,7 +97,7 @@ Log in into the "http(s)://[SERVER_ADDRESS]/" with the newely created admin cred
     • Admin can create feeder, data entry(subadmin) accounts
 
 	
-	Creating admin Account:	
+	Creating Admin Account:	
 	
 		Step 1:
 			Select “Users->Add” Menu
@@ -112,7 +112,7 @@ Log in into the "http(s)://[SERVER_ADDRESS]/" with the newely created admin cred
 
     • The data entry account can add a feed on behalf of the feeders.
 
-	Creating the Account:	
+	Creating The Account:	
 	
 		Step 1:
 			Select “Users->Add” Menu
